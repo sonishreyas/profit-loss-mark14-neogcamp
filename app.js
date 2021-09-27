@@ -38,7 +38,11 @@ function calculateprofitloss()   {
 
 function submitHandler()    {
     if(initialPrice.value != "" && quantityStocks.value != "" && currentPrice.value != ""){
-        calculateprofitloss();
+        if(Number(initialPrice.value) >= 0 && Number(quantityStocks.value) >= 0 && Number(currentPrice.value) >= 0){       
+            calculateprofitloss();
+        }   else   {
+            output.innerText = "Values cannot be negative";
+        }
     }   else    {
         alert('Please fill out all Fields');
     }
