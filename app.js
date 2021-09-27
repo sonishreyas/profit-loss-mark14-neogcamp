@@ -41,6 +41,7 @@ function submitHandler()    {
         if(Number(initialPrice.value) >= 0 && Number(quantityStocks.value) >= 0 && Number(currentPrice.value) >= 0){       
             calculateprofitloss();
         }   else   {
+            output.style.color = 'white';
             output.innerText = "Values cannot be negative";
         }
     }   else    {
